@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,13 @@
     <title>Mi lista de tareas</title>
 
     <!-- Conexión con CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <div class="contenedor">
+    <!-- Encabezado principal -->
+    <header class="contenedor">
 
         <div class="decoracion">✿</div>
 
@@ -23,34 +24,50 @@
             Organiza tus actividades y cumple tus metas ♡
         </p>
 
-        <div class="entrada">
+        <!-- Contenido principal -->
+        <main>
 
-            <input
-                type="text"
-                id="tarea"
-                placeholder="Escribe una nueva tarea..."
-            >
+            <!-- Formulario para agregar tareas -->
+            <section class="entrada" aria-label="Agregar una tarea">
 
-            <button id="agregar">
-                + Agregar
-            </button>
+                <input
+                    type="text"
+                    id="tarea"
+                    placeholder="Escribe una nueva tarea..."
+                    aria-label="Nombre de la tarea"
+                >
 
-        </div>
+                <button id="agregar" type="button">
+                    + Agregar
+                </button>
 
-        <h2>Mis actividades</h2>
+            </section>
 
-        <ul id="listaTareas"></ul>
+            <!-- Sección de actividades -->
+            <section aria-labelledby="titulo-actividades">
 
-        <p id="mensaje"></p>
+                <h2 id="titulo-actividades">
+                    Mis actividades
+                </h2>
 
-        <div class="pie">
+                <ul id="listaTareas"></ul>
+
+                <p id="mensaje" aria-live="polite"></p>
+
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="pie">
             Hecho con cariño ♡
-        </div>
+        </footer>
 
-    </div>
+    </header>
 
     <!-- Conexión con JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
